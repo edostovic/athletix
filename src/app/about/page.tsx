@@ -198,7 +198,7 @@ export default function AboutPage() {
             className="mx-auto mt-10 max-w-4xl overflow-hidden rounded-[20px] shadow-sm"
           >
             <iframe
-              src="https://www.openstreetmap.org/export/embed.html?bbox=18.5,44.4,18.6,44.5&amp;layer=mapnik&amp;marker=44.45,18.55"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=18.47,44.38,18.58,44.43&amp;layer=mapnik&amp;marker=44.4064,18.5265"
               width="100%"
               height="400"
               style={{ border: 0, borderRadius: 20 }}

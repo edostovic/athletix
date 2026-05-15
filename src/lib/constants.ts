@@ -2,7 +2,7 @@ export const SITE = {
   name: "ATHLETIX Gym",
   brand: "Athletix",
   tagline: "Bez izgovora. Samo rezultati.",
-  location: "Banovići, Bosna i Hercegovina",
+  address: "R-471 91, 75290 Banovici, Bosnia and Herzegovina",
   phone: "+387 61 954 069",
   whatsapp: "https://wa.me/38761954069",
   email: "atheltixgym.info@gmail.com",

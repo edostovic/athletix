@@ -156,7 +156,7 @@ export default function ContactPage() {
             className="mx-auto mt-8 max-w-4xl overflow-hidden rounded-[20px] shadow-sm"
           >
             <iframe
-              src="https://www.openstreetmap.org/export/embed.html?bbox=18.5,44.4,18.6,44.5&amp;layer=mapnik&amp;marker=44.45,18.55"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=18.47,44.38,18.58,44.43&amp;layer=mapnik&amp;marker=44.4064,18.5265"
               width="100%"
               height="350"
               style={{ border: 0, borderRadius: 20 }}
@@ -164,6 +164,16 @@ export default function ContactPage() {
               loading="lazy"
               title="ATHLETIX Gym lokacija"
             />
+            <div className="mt-4 text-center">
+              <a
+                href="https://www.google.com/maps?q=R-471+91+75290+Banovici+Bosnia+and+Herzegovina"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-brand-600 hover:text-brand-500 transition-colors"
+              >
+                Pogledaj na Google Maps →
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
