@@ -19,7 +19,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Lokacija",
-    value: "Banovići, Bosna i Hercegovina",
+    value: "Alije Izetbegovića 134, Banovići 75290",
   },
   {
     icon: Clock,
@@ -145,7 +145,7 @@ export default function ContactPage() {
               Naša lokacija
             </h2>
             <p className="mt-2 text-sm text-neutral-500">
-              Banovići, Bosna i Hercegovina
+              Alije Izetbegovića 134, Banovići 75290
             </p>
           </motion.div>
           <motion.div
@@ -166,7 +166,7 @@ export default function ContactPage() {
             />
             <div className="mt-4 text-center">
               <a
-                href="https://www.google.com/maps?q=R-471+91+75290+Banovici+Bosnia+and+Herzegovina"
+                href="https://www.google.com/maps?q=Alije+Izetbegovića+134+Banovići+75290"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-medium text-brand-600 hover:text-brand-500 transition-colors"

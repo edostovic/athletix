@@ -41,7 +41,7 @@ export function Footer() {
               Bez izgovora. Samo rezultati.
             </p>
             <div className="space-y-1 text-sm text-neutral-500">
-              <p>Banovići, Bosna i Hercegovina</p>
+              <p>Alije Izetbegovića 134, Banovići 75290</p>
               <p>+387 61 954 069</p>
               <p>atheltixgym.info@gmail.com</p>
               <p className="pt-1">Pon–Pet: 06:00 – 22:00</p>
