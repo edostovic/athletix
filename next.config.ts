@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  turbopack: {
+    root: "/home/emird/projects/openclaw/web-pipeline/projects/athletix/build/athletix",
+  },
 };
 
 export default nextConfig;

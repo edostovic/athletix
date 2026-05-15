@@ -1,0 +1,115 @@
+"use client";
+
+import { motion } from "framer-motion";
+import {
+  Dumbbell,
+  Users,
+  Calendar,
+  HeartHandshake,
+  LucideIcon,
+} from "lucide-react";
+
+interface Feature {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+}
+
+const features: Feature[] = [
+  {
+    icon: Dumbbell,
+    title: "Expert Coaching",
+    description:
+      "Our certified trainers design programs for your goals — whether you're picking up a barbell for the first time or training for a competition. Every session is personalized.",
+  },
+  {
+    icon: Calendar,
+    title: "Modern Equipment",
+    description:
+      "From premium racks and free weights to cardio machines and functional training zones — everything you need is here, well-maintained and ready.",
+  },
+  {
+    icon: Users,
+    title: "Community Vibe",
+    description:
+      "We keep classes small so everybody knows your name. No waiting for machines. No awkward vibes. Just people who show up for each other.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Flexible Plans",
+    description:
+      "Month-to-month memberships. No contracts. No initiation fees. Freeze your membership anytime. The only thing we lock in is your motivation.",
+  },
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0.34, 1.56, 0.64, 1] as const },
+  },
+};
+
+export function Features() {
+  return (
+    <section className="bg-neutral-50 py-20 sm:py-24 lg:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Section heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.4, ease: [0.34, 1.56, 0.64, 1] as const }}
+          className="mx-auto max-w-2xl text-center"
+        >
+          <h2 className="text-3xl font-bold tracking-tight text-neutral-950 sm:text-4xl">
+            Everything You Need to Succeed
+          </h2>
+          <p className="mt-4 text-lg leading-relaxed text-neutral-600">
+            From expert guidance to top-tier gear — we&apos;ve got you covered
+            at every level.
+          </p>
+        </motion.div>
+
+        {/* Feature cards grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4"
+        >
+          {features.map((feature) => {
+            const Icon = feature.icon;
+            return (
+              <motion.div
+                key={feature.title}
+                variants={cardVariants}
+                className="group rounded-[20px] border border-border bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+              >
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-100 text-brand-600 transition-colors group-hover:bg-brand-500 group-hover:text-white">
+                  <Icon className="h-6 w-6" />
+                </div>
+                <h3 className="text-lg font-semibold text-neutral-950">
+                  {feature.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-neutral-600">
+                  {feature.description}
+                </p>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
