@@ -4,7 +4,11 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-export function FinalCTA() {
+interface FinalCTAProps {
+  onBookTrial?: () => void;
+}
+
+export function FinalCTA({ onBookTrial }: FinalCTAProps) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-brand-600 via-brand-500 to-accent">
       {/* Pattern overlay */}
@@ -28,18 +32,17 @@ export function FinalCTA() {
             Ready to Start Your Journey?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-white/80">
-            Join Athletix today and get your first week free — no strings
+            Join Athletix today and try us free — no strings
             attached, no sign-up fees.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link href="/contact">
-              <Button
-                size="lg"
-                className="rounded-xl bg-white px-8 py-6 text-base font-bold text-brand-600 shadow-lg transition-all hover:bg-neutral-100 hover:shadow-xl active:scale-[0.97]"
-              >
-                Book Your Free First Week
-              </Button>
-            </Link>
+            <Button
+              size="lg"
+              onClick={onBookTrial}
+              className="rounded-xl bg-white px-8 py-6 text-base font-bold text-brand-600 shadow-lg transition-all hover:bg-neutral-100 hover:shadow-xl active:scale-[0.97]"
+            >
+              Book Your Free 1 Day Trial
+            </Button>
             <Link href="/classes">
               <Button
                 variant="outline"

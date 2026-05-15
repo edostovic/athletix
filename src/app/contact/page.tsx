@@ -12,7 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { toast } from "sonner";
-import { MapPin, Clock, Phone, Mail } from "lucide-react";
+import { MapPin, Clock, Phone, Mail, Loader2 } from "lucide-react";
 import Link from "next/link";
 
 const contactInfo = [
@@ -54,6 +54,7 @@ export default function ContactPage() {
     interest: "",
     message: "",
   });
+  const [submitting, setSubmitting] = useState(false);
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -67,12 +68,43 @@ export default function ContactPage() {
     }
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    toast.success("Thanks for reaching out!", {
-      description: "We'll get back to you within 24 hours.",
-    });
-    setFormData({ name: "", email: "", phone: "", interest: "", message: "" });
+    setSubmitting(true);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        const errorMsg =
+          data.errors?.join(" ") || data.error || "Something went wrong.";
+        toast.error("Submission failed", { description: errorMsg });
+        return;
+      }
+
+      toast.success("Thanks for reaching out!", {
+        description: "We'll get back to you within 24 hours.",
+      });
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        interest: "",
+        message: "",
+      });
+    } catch {
+      toast.error("Network error", {
+        description: "Could not reach the server. Please try again.",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -225,9 +257,17 @@ export default function ContactPage() {
 
                 <Button
                   type="submit"
-                  className="rounded-xl bg-accent px-8 py-6 text-base font-bold text-white shadow-sm transition-all hover:bg-accent-dark hover:shadow-md active:scale-[0.97]"
+                  disabled={submitting}
+                  className="rounded-xl bg-accent px-8 py-6 text-base font-bold text-white shadow-sm transition-all hover:bg-accent-dark hover:shadow-md active:scale-[0.97] disabled:pointer-events-none disabled:opacity-60"
                 >
-                  Send Message
+                  {submitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    "Send Message"
+                  )}
                 </Button>
               </form>
             </motion.div>

@@ -4,7 +4,11 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-export function Hero() {
+interface HeroProps {
+  onBookTrial?: () => void;
+}
+
+export function Hero({ onBookTrial }: HeroProps) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-neutral-950 via-neutral-900 to-brand-900">
       {/* Subtle pattern overlay */}
@@ -26,7 +30,7 @@ export function Hero() {
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-400/20 bg-brand-500/10 px-4 py-1.5 text-sm font-medium text-brand-300"
           >
             <span className="h-2 w-2 rounded-full bg-accent" />
-            New members: first week free
+            New members: try us free for 1 day
           </motion.div>
 
           {/* Headline */}
@@ -59,14 +63,13 @@ export function Hero() {
             transition={{ duration: 0.4, ease: [0.34, 1.56, 0.64, 1] as const, delay: 0.3 }}
             className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
-            <Link href="/contact">
-              <Button
-                size="lg"
-                className="rounded-xl bg-accent px-8 py-6 text-base font-bold text-white shadow-lg transition-all hover:bg-accent-dark hover:shadow-xl active:scale-[0.97]"
-              >
-                Book Your Free First Week
-              </Button>
-            </Link>
+            <Button
+              size="lg"
+              onClick={onBookTrial}
+              className="rounded-xl bg-accent px-8 py-6 text-base font-bold text-white shadow-lg transition-all hover:bg-accent-dark hover:shadow-xl active:scale-[0.97]"
+            >
+              Book Your Free 1 Day Trial
+            </Button>
             <Link href="/pricing">
               <Button
                 variant="outline"

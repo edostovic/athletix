@@ -106,7 +106,7 @@ export default function PricingPage() {
             className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-neutral-300"
           >
             No hidden fees. No surprise charges. Month-to-month, cancel
-            anytime. Your first week is free.
+            anytime. Your first day is on us.
           </motion.p>
         </div>
       </section>
@@ -201,7 +201,7 @@ export default function PricingPage() {
             transition={{ duration: 0.4, delay: 0.3 }}
             className="mt-10 text-center text-sm text-neutral-500"
           >
-            All memberships include a <strong>free first week</strong>. No credit card required. Cancel anytime with 30 days notice.
+            All memberships include a <strong>free trial day</strong>. No credit card required. Cancel anytime with 30 days notice.
           </motion.p>
         </div>
       </section>

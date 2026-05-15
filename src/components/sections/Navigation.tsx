@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -21,8 +22,15 @@ export function Navigation() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <span className="text-2xl font-extrabold tracking-tight text-brand-500">
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/athletix_logo.jpg"
+            alt="Athletix"
+            width={40}
+            height={40}
+            className="h-10 w-10 rounded-xl object-cover"
+          />
+          <span className="text-xl font-extrabold tracking-tight text-brand-500">
             Athletix
           </span>
         </Link>

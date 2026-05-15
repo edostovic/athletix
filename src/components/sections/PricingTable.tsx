@@ -182,7 +182,7 @@ export function PricingTable() {
           transition={{ duration: 0.4, delay: 0.3 }}
           className="mt-10 text-center text-sm text-neutral-500"
         >
-          All memberships include a free first week. No credit card required.
+          All memberships include a free trial day. No credit card required.
         </motion.p>
       </div>
     </section>

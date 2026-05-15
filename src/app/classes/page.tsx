@@ -142,7 +142,7 @@ export default function ClassesPage() {
             transition={{ duration: 0.4, delay: 0.1, ease: [0.34, 1.56, 0.64, 1] as const }}
             className="mx-auto mt-4 max-w-xl text-neutral-400"
           >
-            Your first week is free — try any class, use any equipment, no
+            Your first class is free — try any class, use any equipment, no
             commitment.
           </motion.p>
           <motion.div
@@ -154,7 +154,7 @@ export default function ClassesPage() {
           >
             <Link href="/contact">
               <Button className="rounded-xl bg-accent px-8 py-6 text-base font-bold text-white shadow-lg transition-all hover:bg-accent-dark active:scale-[0.97]">
-                Book Your Free First Week
+                Book Your Free 1 Day Trial
               </Button>
             </Link>
             <Link href="/pricing">

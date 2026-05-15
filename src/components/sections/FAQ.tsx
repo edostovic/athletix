@@ -22,7 +22,7 @@ const faqs = [
   {
     question: "Do you offer a free trial?",
     answer:
-      "Absolutely. Your first week is completely free — all classes, all equipment, full access.",
+      "Absolutely. Your first visit is completely free — all classes, all equipment, full access.",
   },
   {
     question: "What if I'm a complete beginner?",
