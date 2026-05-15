@@ -156,7 +156,7 @@ export default function ContactPage() {
             className="mx-auto mt-8 max-w-4xl overflow-hidden rounded-[20px] shadow-sm"
           >
             <iframe
-              src="https://www.openstreetmap.org/export/embed.html?bbox=18.47,44.38,18.58,44.43&amp;layer=mapnik&amp;marker=44.4064,18.5265"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=18.51,44.39,18.53,44.41&amp;layer=mapnik&amp;marker=44.403957,18.520449"
               width="100%"
               height="350"
               style={{ border: 0, borderRadius: 20 }}

@@ -50,7 +50,7 @@ export function Footer() {
             </div>
             <div className="overflow-hidden rounded-xl pt-2">
               <iframe
-                src="https://www.openstreetmap.org/export/embed.html?bbox=18.47,44.38,18.58,44.43&amp;layer=mapnik&amp;marker=44.4064,18.5265"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=18.51,44.39,18.53,44.41&amp;layer=mapnik&amp;marker=44.403957,18.520449"
                 width="100%"
                 height="120"
                 style={{ border: 0 }}
