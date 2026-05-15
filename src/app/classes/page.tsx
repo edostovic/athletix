@@ -156,7 +156,7 @@ export default function ClassesPage() {
               </Button>
             </Link>
             <Link href="/pricing">
-              <Button variant="outline" className="rounded-xl border-neutral-600 px-8 py-6 text-base font-semibold text-white transition-all hover:bg-white/10 hover:text-white active:scale-[0.97]">
+              <Button variant="outline" className="rounded-xl border-neutral-600 bg-neutral-900/70 px-8 py-6 text-base font-semibold text-white transition-all hover:bg-neutral-800 hover:text-white active:scale-[0.97]">
                 Pogledaj cijene
               </Button>
             </Link>

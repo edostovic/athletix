@@ -73,7 +73,7 @@ export function Hero({ onBookTrial }: HeroProps) {
               <Button
                 variant="outline"
                 size="lg"
-                className="rounded-xl border-neutral-600 px-8 py-6 text-base font-semibold text-white transition-all hover:bg-white/10 hover:text-white active:scale-[0.97]"
+                className="rounded-xl border-neutral-600 bg-neutral-900/70 px-8 py-6 text-base font-semibold text-white transition-all hover:bg-neutral-800 hover:text-white active:scale-[0.97]"
               >
                 Pogledaj cijene
               </Button>
