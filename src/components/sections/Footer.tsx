@@ -48,6 +48,17 @@ export function Footer() {
               <p>Sub: 08:00 – 20:00</p>
               <p>Ned: 10:00 – 16:00</p>
             </div>
+            <div className="overflow-hidden rounded-xl pt-2">
+              <iframe
+                src="https://www.openstreetmap.org/export/embed.html?bbox=18.5,44.4,18.6,44.5&amp;layer=mapnik&amp;marker=44.45,18.55"
+                width="100%"
+                height="120"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                title="ATHLETIX Gym lokacija"
+              />
+            </div>
           </div>
 
           {/* Link columns */}

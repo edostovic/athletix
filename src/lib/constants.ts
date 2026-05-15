@@ -19,7 +19,7 @@ export const SITE = {
 export const PRICING = {
   dayPass: { label: "Dnevna", price: "5 KM" },
   monthly: { label: "Mjesečna", price: "45 KM" },
-  annual: { label: "Godišnja", price: "399 KM" },
+  quarterly: { label: "Tromjesečna", price: "35 KM/mjesečno" },
 } as const;
 
 export const NAV = {

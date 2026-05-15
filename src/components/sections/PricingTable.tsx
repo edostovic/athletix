@@ -32,7 +32,6 @@ const tiers: PricingTier[] = [
     name: "Mjesečna",
     price: "45 KM",
     description: "Potpuni pristup, maksimalna fleksibilnost.",
-    highlighted: true,
     features: [
       "Pristup teretani u svako vrijeme",
       "Sve grupne vježbe uključene",
@@ -44,18 +43,17 @@ const tiers: PricingTier[] = [
     cta: "Postani član",
   },
   {
-    name: "Godišnja",
-    price: "399 KM",
-    description: "Najbolja vrijednost — uštedi 141 KM godišnje.",
+    name: "Tromjesečna",
+    price: "35 KM/mjesečno",
+    description: "Ukupno 105 KM — 3 mjeseca napretka po najboljoj cijeni.",
+    highlighted: true,
     features: [
-      "Sve iz Mjesečne članarine",
-      "2 personalna treninga/mjesečno",
-      "Personalizirani program",
-      "Nutricionistički savjeti",
-      "Prioritetna rezervacija",
-      "Premium ormarić sa ručnicima",
+      "Neograničen pristup",
+      "Sva oprema",
+      "Grupni treninzi",
+      "2 PT treninga",
     ],
-    cta: "Idi na Godišnju",
+    cta: "Započni tromjesečje",
   },
 ];
 
@@ -132,7 +130,7 @@ export function PricingTable() {
                     {tier.price}
                   </span>
                   <span className="text-sm text-neutral-400">
-                    {tier.name === "Dnevna" ? "/dan" : tier.name === "Godišnja" ? "/god" : "/mjesc"}
+                    {tier.name === "Dnevna" ? "/dan" : tier.name === "Tromjesečna" ? "" : "/mjesc"}
                   </span>
                 </div>
                 <p className="mt-2 text-sm text-neutral-400">

@@ -173,6 +173,43 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Location */}
+      <section className="bg-white py-20 sm:py-24 lg:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.4, ease: [0.34, 1.56, 0.64, 1] as const }}
+            className="mx-auto max-w-3xl text-center"
+          >
+            <h2 className="text-2xl font-bold text-neutral-950 sm:text-3xl">
+              Gdje se nalazimo
+            </h2>
+            <p className="mt-2 text-base text-neutral-600">
+              Smješteni u srcu Banovića — uvijek si dobrodošao.
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.4, delay: 0.1, ease: [0.34, 1.56, 0.64, 1] as const }}
+            className="mx-auto mt-10 max-w-4xl overflow-hidden rounded-[20px] shadow-sm"
+          >
+            <iframe
+              src="https://www.openstreetmap.org/export/embed.html?bbox=18.5,44.4,18.6,44.5&amp;layer=mapnik&amp;marker=44.45,18.55"
+              width="100%"
+              height="400"
+              style={{ border: 0, borderRadius: 20 }}
+              allowFullScreen
+              loading="lazy"
+              title="ATHLETIX Gym lokacija"
+            />
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-neutral-950 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
