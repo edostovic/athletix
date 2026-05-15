@@ -29,11 +29,10 @@ export function FinalCTA({ onBookTrial }: FinalCTAProps) {
           className="mx-auto max-w-3xl text-center"
         >
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            Ready to Start Your Journey?
+            Spreman za početak?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-white/80">
-            Join Athletix today and try us free — no strings
-            attached, no sign-up fees.
+            Pridruži se Athletixu danas i probaj besplatno — bez obaveze, bez upisnine.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button
@@ -41,7 +40,7 @@ export function FinalCTA({ onBookTrial }: FinalCTAProps) {
               onClick={onBookTrial}
               className="rounded-xl bg-white px-8 py-6 text-base font-bold text-brand-600 shadow-lg transition-all hover:bg-neutral-100 hover:shadow-xl active:scale-[0.97]"
             >
-              Book Your Free 1 Day Trial
+              Zakaži besplatni probni trening
             </Button>
             <Link href="/classes">
               <Button
@@ -49,7 +48,7 @@ export function FinalCTA({ onBookTrial }: FinalCTAProps) {
                 size="lg"
                 className="rounded-xl border-white/30 px-8 py-6 text-base font-semibold text-white transition-all hover:bg-white/10 hover:text-white active:scale-[0.97]"
               >
-                See Our Classes
+                Pogledaj treninge
               </Button>
             </Link>
           </div>

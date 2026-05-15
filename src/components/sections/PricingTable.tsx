@@ -17,45 +17,45 @@ interface PricingTier {
 
 const tiers: PricingTier[] = [
   {
-    name: "Starter",
-    price: "€29",
-    description: "Perfect for building a consistent routine.",
+    name: "Dnevna",
+    price: "5 KM",
+    description: "Jednodnevni pass — probaj bez obaveze.",
     features: [
-      "Off-peak gym access (Mon–Fri 6am–4pm)",
-      "Full equipment access",
-      "Complimentary fitness assessment",
-      "Locker room & shower access",
+      "Pristup teretani za 1 dan",
+      "Puna oprema na raspolaganju",
+      "Sve grupne vježbe",
+      "Svlačionica i tuš",
     ],
-    cta: "Get Started",
+    cta: "Probaj danas",
   },
   {
-    name: "Unlimited",
-    price: "€49",
-    description: "Full access, full flexibility.",
+    name: "Mjesečna",
+    price: "45 KM",
+    description: "Potpuni pristup, maksimalna fleksibilnost.",
     highlighted: true,
     features: [
-      "All-hours gym access",
-      "All group classes included",
-      "Complimentary fitness assessment",
-      "Locker room & shower access",
-      "Guest pass (1x/month)",
-      "Freeze membership anytime",
+      "Pristup teretani u svako vrijeme",
+      "Sve grupne vježbe uključene",
+      "Besplatna fitness procjena",
+      "Svlačionica i tuš",
+      "Dovedi prijatelja (1x/mjesečno)",
+      "Zamrzni članstvo kad želiš",
     ],
-    cta: "Join Athletix Today",
+    cta: "Postani član",
   },
   {
-    name: "Premium",
-    price: "€79",
-    description: "Everything plus dedicated coaching.",
+    name: "Godišnja",
+    price: "399 KM",
+    description: "Najbolja vrijednost — uštedi 141 KM godišnje.",
     features: [
-      "All Unlimited features",
-      "2 personal training sessions/month",
-      "Custom program design",
-      "Nutrition guidance",
-      "Priority class booking",
-      "Premium locker with towel service",
+      "Sve iz Mjesečne članarine",
+      "2 personalna treninga/mjesečno",
+      "Personalizirani program",
+      "Nutricionistički savjeti",
+      "Prioritetna rezervacija",
+      "Premium ormarić sa ručnicima",
     ],
-    cta: "Go Premium",
+    cta: "Idi na Godišnju",
   },
 ];
 
@@ -89,11 +89,10 @@ export function PricingTable() {
           className="mx-auto max-w-2xl text-center"
         >
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Simple Pricing. Real Results.
+            Jednostavne cijene. Pravi rezultati.
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-neutral-400">
-            No hidden fees. No surprise charges. Month-to-month, cancel
-            anytime.
+            Bez skrivenih troškova. Mjesec za mjesec, otkaži kad god želiš.
           </p>
         </motion.div>
 
@@ -119,7 +118,7 @@ export function PricingTable() {
               {tier.highlighted && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                   <span className="inline-block rounded-full bg-accent px-4 py-1 text-xs font-semibold text-white">
-                    Most Popular
+                    Najpopularnije
                   </span>
                 </div>
               )}
@@ -132,7 +131,9 @@ export function PricingTable() {
                   <span className="text-4xl font-extrabold text-white">
                     {tier.price}
                   </span>
-                  <span className="text-sm text-neutral-400">/month</span>
+                  <span className="text-sm text-neutral-400">
+                    {tier.name === "Dnevna" ? "/dan" : tier.name === "Godišnja" ? "/god" : "/mjesc"}
+                  </span>
                 </div>
                 <p className="mt-2 text-sm text-neutral-400">
                   {tier.description}
@@ -182,7 +183,7 @@ export function PricingTable() {
           transition={{ duration: 0.4, delay: 0.3 }}
           className="mt-10 text-center text-sm text-neutral-500"
         >
-          All memberships include a free trial day. No credit card required.
+          Sva članstva uključuju besplatni probni dan. Nije potrebna kreditna kartica.
         </motion.p>
       </div>
     </section>

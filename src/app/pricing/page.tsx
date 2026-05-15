@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 interface TierDetail {
   name: string;
   price: string;
+  period: string;
   description: string;
   features: { name: string; included: boolean }[];
   highlighted?: boolean;
@@ -17,53 +18,52 @@ interface TierDetail {
 
 const tiers: TierDetail[] = [
   {
-    name: "Starter",
-    price: "€29",
-    description: "For building a consistent routine with off-peak access.",
+    name: "Dnevna",
+    price: "5",
+    period: "KM / dan",
+    description: "Za one koji žele probati prije nego se odluče.",
     features: [
-      { name: "Off-peak gym access (Mon–Fri 6am–4pm)", included: true },
-      { name: "Full equipment access", included: true },
-      { name: "All group classes", included: false },
-      { name: "Complimentary fitness assessment", included: true },
-      { name: "Locker room & shower access", included: true },
-      { name: "Guest pass", included: false },
-      { name: "Personal training sessions", included: false },
-      { name: "Freeze membership anytime", included: false },
+      { name: "Pristup teretani za 1 dan", included: true },
+      { name: "Puna oprema na raspolaganju", included: true },
+      { name: "Sve grupne vježbe", included: true },
+      { name: "Svlačionica i tuš", included: true },
     ],
-    cta: "Get Started",
+    cta: "Probaj danas",
   },
   {
-    name: "Unlimited",
-    price: "€49",
-    description: "Full access, full flexibility — our most popular plan.",
+    name: "Mjesečna",
+    price: "45",
+    period: "KM / mjesečno",
+    description: "Potpuni pristup, maksimalna fleksibilnost — najpopularniji plan.",
     features: [
-      { name: "All-hours gym access", included: true },
-      { name: "Full equipment access", included: true },
-      { name: "All group classes", included: true },
-      { name: "Complimentary fitness assessment", included: true },
-      { name: "Locker room & shower access", included: true },
-      { name: "Guest pass (1x/month)", included: true },
-      { name: "Personal training sessions", included: false },
-      { name: "Freeze membership anytime", included: true },
+      { name: "Pristup teretani u svako vrijeme", included: true },
+      { name: "Puna oprema na raspolaganju", included: true },
+      { name: "Sve grupne vježbe", included: true },
+      { name: "Besplatna fitness procjena", included: true },
+      { name: "Svlačionica i tuš", included: true },
+      { name: "Dovedi prijatelja (1x/mjesečno)", included: true },
+      { name: "Personalni treninzi", included: false },
+      { name: "Zamrzni članstvo bilo kada", included: true },
     ],
     highlighted: true,
-    cta: "Join Athletix Today",
+    cta: "Postani član",
   },
   {
-    name: "Premium",
-    price: "€79",
-    description: "Everything plus dedicated coaching and premium perks.",
+    name: "Godišnja",
+    price: "399",
+    period: "KM / godišnje",
+    description: "Najbolja vrijednost — uštedi 141 KM godišnje.",
     features: [
-      { name: "All-hours gym access", included: true },
-      { name: "Full equipment access", included: true },
-      { name: "All group classes", included: true },
-      { name: "Complimentary fitness assessment", included: true },
-      { name: "Locker room & shower access", included: true },
-      { name: "Guest pass (2x/month)", included: true },
-      { name: "2 personal training sessions/month", included: true },
-      { name: "Freeze membership anytime", included: true },
+      { name: "Pristup teretani u svako vrijeme", included: true },
+      { name: "Puna oprema na raspolaganju", included: true },
+      { name: "Sve grupne vježbe", included: true },
+      { name: "Besplatna fitness procjena", included: true },
+      { name: "Svlačionica i tuš", included: true },
+      { name: "Dovedi prijatelja (2x/mjesečno)", included: true },
+      { name: "2 personalna treninga/mjesečno", included: true },
+      { name: "Zamrzni članstvo bilo kada", included: true },
     ],
-    cta: "Go Premium",
+    cta: "Idi na Godišnju",
   },
 ];
 
@@ -96,8 +96,8 @@ export default function PricingPage() {
             transition={{ duration: 0.5, ease: [0.34, 1.56, 0.64, 1] as const }}
             className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl"
           >
-            Simple Pricing.{" "}
-            <span className="text-brand-400">Real Results.</span>
+            Jednostavne cijene.{" "}
+            <span className="text-brand-400">Pravi rezultati.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -105,8 +105,7 @@ export default function PricingPage() {
             transition={{ duration: 0.4, ease: [0.34, 1.56, 0.64, 1] as const, delay: 0.1 }}
             className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-neutral-300"
           >
-            No hidden fees. No surprise charges. Month-to-month, cancel
-            anytime. Your first day is on us.
+            Bez skrivenih troškova. Mjesec za mjesec, otkaži bilo kada. Tvoj prvi dan je na nama.
           </motion.p>
         </div>
       </section>
@@ -135,7 +134,7 @@ export default function PricingPage() {
                 {tier.highlighted && (
                   <div className="mb-4">
                     <span className="inline-block rounded-full bg-accent px-4 py-1 text-xs font-semibold text-white">
-                      Most Popular
+                      Najpopularnije
                     </span>
                   </div>
                 )}
@@ -148,7 +147,9 @@ export default function PricingPage() {
                     <span className="text-4xl font-extrabold text-neutral-950">
                       {tier.price}
                     </span>
-                    <span className="text-sm text-neutral-500">/month</span>
+                    <span className="text-sm text-neutral-500">
+                      {tier.period}
+                    </span>
                   </div>
                   <p className="mt-2 text-sm text-neutral-500">
                     {tier.description}
@@ -201,7 +202,7 @@ export default function PricingPage() {
             transition={{ duration: 0.4, delay: 0.3 }}
             className="mt-10 text-center text-sm text-neutral-500"
           >
-            All memberships include a <strong>free trial day</strong>. No credit card required. Cancel anytime with 30 days notice.
+            Sva članstva uključuju <strong>besplatan probni dan</strong>. Nije potrebna kreditna kartica. Otkaži bilo kada uz 30 dana otkaznog roka.
           </motion.p>
         </div>
       </section>
@@ -216,16 +217,15 @@ export default function PricingPage() {
             transition={{ duration: 0.4, ease: [0.34, 1.56, 0.64, 1] as const }}
           >
             <h2 className="text-2xl font-bold text-neutral-950 sm:text-3xl">
-              Still Have Questions?
+              Imaš još pitanja?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-neutral-600">
-              We&apos;re happy to help. Reach out and we&apos;ll get back to
-              you within 24 hours.
+            Rado ćemo ti pomoći. Javi nam se i odgovorit ćemo u roku od 24 sata.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link href="/contact">
                 <Button className="rounded-xl bg-accent px-8 py-6 text-base font-bold text-white shadow-lg transition-all hover:bg-accent-dark active:scale-[0.97]">
-                  Contact Us
+                  Kontaktiraj nas
                 </Button>
               </Link>
             </div>

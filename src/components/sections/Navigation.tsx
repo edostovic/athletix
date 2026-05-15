@@ -8,11 +8,11 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/classes", label: "Classes" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", label: "Početna" },
+  { href: "/about", label: "O nama" },
+  { href: "/classes", label: "Treninzi" },
+  { href: "/pricing", label: "Cenovnik" },
+  { href: "/contact", label: "Kontakt" },
 ];
 
 export function Navigation() {
@@ -52,7 +52,7 @@ export function Navigation() {
         <div className="hidden items-center gap-3 md:flex">
           <Link href="/contact">
             <Button className="rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-accent-dark hover:shadow-md active:scale-[0.97]">
-              Book Free Trial
+              Zakaži besplatno
             </Button>
           </Link>
         </div>
@@ -62,7 +62,7 @@ export function Navigation() {
           type="button"
           className="inline-flex items-center justify-center rounded-xl p-2 text-neutral-700 hover:bg-neutral-100 md:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          aria-label={mobileOpen ? "Zatvori meni" : "Otvori meni"}
           aria-expanded={mobileOpen}
         >
           <svg
@@ -115,7 +115,7 @@ export function Navigation() {
               ))}
               <Link href="/contact" onClick={() => setMobileOpen(false)}>
                 <Button className="mt-2 rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white transition-all hover:bg-accent-dark">
-                  Book Free Trial
+                  Zakaži besplatno
                 </Button>
               </Link>
             </nav>

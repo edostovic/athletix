@@ -18,27 +18,27 @@ interface Feature {
 const features: Feature[] = [
   {
     icon: Dumbbell,
-    title: "Expert Coaching",
+    title: "Stručno vođenje",
     description:
-      "Our certified trainers design programs for your goals — whether you're picking up a barbell for the first time or training for a competition. Every session is personalized.",
+      "Naši certificirani treneri kreiraju programe za tvoje ciljeve — bilo da prvi put dižeš uteg ili se spremaš za takmičenje. Svaki trening je personalizovan.",
   },
   {
     icon: Calendar,
-    title: "Modern Equipment",
+    title: "Moderna oprema",
     description:
-      "From premium racks and free weights to cardio machines and functional training zones — everything you need is here, well-maintained and ready.",
+      "Od premium rackova i slobodnih tegova do kardio mašina i funkcionalnih zona — sve što ti treba je ovdje, održavano i spremno za upotrebu.",
   },
   {
     icon: Users,
-    title: "Community Vibe",
+    title: "Zajednica",
     description:
-      "We keep classes small so everybody knows your name. No waiting for machines. No awkward vibes. Just people who show up for each other.",
+      "Držimo male grupe tako da svi znaju tvoje ime. Bez čekanja na sprave. Bez neugodnosti. Samo ljudi koji su tu jedni za druge.",
   },
   {
     icon: HeartHandshake,
-    title: "Flexible Plans",
+    title: "Fleksibilni planovi",
     description:
-      "Month-to-month memberships. No contracts. No initiation fees. Freeze your membership anytime. The only thing we lock in is your motivation.",
+      "Članstvo od mjeseca do mjeseca. Bez ugovora. Bez upisnine. Zamrzni članstvo kad god želiš. Jedino što zaključavamo je tvoja motivacija.",
   },
 ];
 
@@ -72,11 +72,10 @@ export function Features() {
           className="mx-auto max-w-2xl text-center"
         >
           <h2 className="text-3xl font-bold tracking-tight text-neutral-950 sm:text-4xl">
-            Everything You Need to Succeed
+            Sve što ti treba za uspjeh
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-neutral-600">
-            From expert guidance to top-tier gear — we&apos;ve got you covered
-            at every level.
+            Od stručnog vođenja do vrhunske opreme — pokrili smo te na svakom nivou.
           </p>
         </motion.div>
 

@@ -2,27 +2,25 @@ import Link from "next/link";
 
 const footerLinks = [
   {
-    title: "Quick Links",
+    title: "Linkovi",
     items: [
-      { href: "/", label: "Home" },
-      { href: "/about", label: "About" },
-      { href: "/classes", label: "Classes" },
-      { href: "/pricing", label: "Pricing" },
+      { href: "/", label: "Početna" },
+      { href: "/about", label: "O nama" },
+      { href: "/classes", label: "Treninzi" },
+      { href: "/pricing", label: "Cenovnik" },
+      { href: "/contact", label: "Kontakt" },
     ],
   },
   {
-    title: "Support",
+    title: "Pomoć",
     items: [
-      { href: "/contact", label: "Contact Us" },
-      { href: "/faq", label: "FAQ" },
+      { href: "/contact", label: "Kontaktiraj nas" },
     ],
   },
   {
-    title: "Community",
+    title: "Zajednica",
     items: [
-      { href: "#", label: "Instagram" },
-      { href: "#", label: "Facebook" },
-      { href: "#", label: "YouTube" },
+      { href: "https://www.instagram.com/athletix_gym/", label: "Instagram" },
     ],
   },
 ];
@@ -37,16 +35,18 @@ export function Footer() {
           {/* Brand column */}
           <div className="space-y-4">
             <Link href="/" className="text-2xl font-extrabold tracking-tight text-white">
-              Athletix
+              ATHLETIX Gym
             </Link>
             <p className="text-sm leading-relaxed text-neutral-400">
-              Real coaching. Real community. Zero intimidation.
+              Bez izgovora. Samo rezultati.
             </p>
             <div className="space-y-1 text-sm text-neutral-500">
-              <p>123 Fitness Street</p>
-              <p>City, State 10001</p>
-              <p className="pt-1">Mon–Fri: 6am – 10pm</p>
-              <p>Sat–Sun: 8am – 8pm</p>
+              <p>Banovići, Bosna i Hercegovina</p>
+              <p>+387 61 954 069</p>
+              <p>atheltixgym.info@gmail.com</p>
+              <p className="pt-1">Pon–Pet: 06:00 – 22:00</p>
+              <p>Sub: 08:00 – 20:00</p>
+              <p>Ned: 10:00 – 16:00</p>
             </div>
           </div>
 
@@ -74,7 +74,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 border-t border-neutral-800 pt-6 text-center text-xs text-neutral-600">
-          <p>&copy; {currentYear} Athletix Gym. All rights reserved.</p>
+          <p>&copy; {currentYear} ATHLETIX Gym. Sva prava zadržana.</p>
         </div>
       </div>
     </footer>

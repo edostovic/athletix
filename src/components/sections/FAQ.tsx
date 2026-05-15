@@ -10,29 +10,29 @@ import {
 
 const faqs = [
   {
-    question: "What's included in a membership?",
+    question: "Šta je uključeno u članstvo?",
     answer:
-      "Full access to equipment, all group classes, complimentary fitness assessment, and locker room access.",
+      "Potpuni pristup opremi, sve grupne vježbe, besplatna fitness procjena i korištenje svlačionice.",
   },
   {
-    question: "Is there a contract?",
+    question: "Da li postoji ugovorna obaveza?",
     answer:
-      "No. Month-to-month. Cancel anytime with 30 days notice.",
+      "Ne. Članstvo je od mjeseca do mjeseca. Otkaži bilo kada uz 30 dana otkaznog roka.",
   },
   {
-    question: "Do you offer a free trial?",
+    question: "Imate li besplatni probni trening?",
     answer:
-      "Absolutely. Your first visit is completely free — all classes, all equipment, full access.",
+      "Naravno. Tvoja prva posjeta je potpuno besplatna — sve vježbe, sva oprema, pun pristup.",
   },
   {
-    question: "What if I'm a complete beginner?",
+    question: "Šta ako sam potpuni početnik?",
     answer:
-      "Perfect. Most of our members started exactly where you are. We'll show you everything.",
+      "Savršeno. Većina naših članova je počela upravo tu gdje si ti. Sve ćemo ti pokazati.",
   },
   {
-    question: "What classes do you offer?",
+    question: "Koje vježbe nudite?",
     answer:
-      "Strength training, HIIT, yoga, functional fitness, and Open Gym for self-guided sessions.",
+      "Trening snage, HIIT, jogu, funkcionalni trening i Open Gym za samostalne treninge.",
   },
 ];
 
@@ -48,7 +48,7 @@ export function FAQ() {
           className="mx-auto max-w-2xl text-center"
         >
           <h2 className="text-3xl font-bold tracking-tight text-neutral-950 sm:text-4xl">
-            Got Questions? We&apos;ve Got Answers.
+            Imaš pitanja? Imamo odgovore.
           </h2>
         </motion.div>
 

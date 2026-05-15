@@ -8,38 +8,38 @@ import { Dumbbell, Zap, Leaf, Activity, Clock } from "lucide-react";
 const classes = [
   {
     icon: Dumbbell,
-    title: "Strength Training",
+    title: "Snaga",
     description:
-      "Build raw power with compound lifts and progressive overload. Perfect for building muscle and increasing strength.",
-    schedule: "Mon–Fri 7am, 12pm, 6pm • Sat 9am",
+      "Izgradi čistu snagu sa compound liftovima i progresivnim opterećenjem. Savršeno za izgradnju mišića i povećanje snage.",
+    schedule: "Pon–Pet 7h, 12h, 18h • Sub 9h",
   },
   {
     icon: Zap,
     title: "HIIT",
     description:
-      "High-intensity intervals to torch calories and build cardiovascular endurance in 45 minutes flat.",
-    schedule: "Mon–Fri 6am, 8am, 5pm • Sat 10am",
+      "Visoko-intenzivni intervali za sagorijevanje kalorija i izgradnju kardiovaskularne izdržljivosti za samo 45 minuta.",
+    schedule: "Pon–Pet 6h, 8h, 17h • Sub 10h",
   },
   {
     icon: Leaf,
-    title: "Yoga",
+    title: "Joga",
     description:
-      "Improve flexibility, mobility, and mental focus. All levels welcome — from first-timers to experienced practitioners.",
-    schedule: "Tue/Thu 7am • Wed 6pm • Sun 10am",
+      "Poboljšaj fleksibilnost, mobilnost i mentalni fokus. Dobrodošli svi nivoi — od potpunih početnika do iskusnih praktičara.",
+    schedule: "Uto/Čet 7h • Sri 18h • Ned 10h",
   },
   {
     icon: Activity,
-    title: "Functional Fitness",
+    title: "Funkcionalni trening",
     description:
-      "Movement patterns that translate to real life. Improve your everyday strength, balance, and agility.",
-    schedule: "Mon/Wed/Fri 9am • Tue/Thu 5pm",
+      "Obrasci pokreta koji se prenose u stvarni život. Poboljšaj svakodnevnu snagu, ravnotežu i agilnost.",
+    schedule: "Pon/Sri/Pet 9h • Uto/Čet 17h",
   },
   {
     icon: Clock,
     title: "Open Gym",
     description:
-      "Self-guided training time with full access to all equipment. Train at your own pace, on your own program.",
-    schedule: "Daily during operating hours",
+      "Samostalni trening sa punim pristupom cjelokupnoj opremi. Vježbaj svojim tempom, po svom programu.",
+    schedule: "Svakodnevno tokom radnog vremena",
   },
 ];
 
@@ -72,7 +72,7 @@ export default function ClassesPage() {
             transition={{ duration: 0.5, ease: [0.34, 1.56, 0.64, 1] as const }}
             className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl"
           >
-            Find Your Flow
+            Pronađi svoj ritam
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -80,8 +80,7 @@ export default function ClassesPage() {
             transition={{ duration: 0.4, ease: [0.34, 1.56, 0.64, 1] as const, delay: 0.1 }}
             className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-neutral-300"
           >
-            From morning strength to evening yoga — classes for every level,
-            every schedule.
+            Od jutarnje snage do večernje joge — treninzi za sve nivoe, za svaki raspored.
           </motion.p>
         </div>
       </section>
@@ -133,7 +132,7 @@ export default function ClassesPage() {
             transition={{ duration: 0.4, ease: [0.34, 1.56, 0.64, 1] as const }}
             className="text-2xl font-bold text-white sm:text-3xl"
           >
-            Ready to Try a Class?
+            Spreman da probaš trening?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -142,8 +141,7 @@ export default function ClassesPage() {
             transition={{ duration: 0.4, delay: 0.1, ease: [0.34, 1.56, 0.64, 1] as const }}
             className="mx-auto mt-4 max-w-xl text-neutral-400"
           >
-            Your first class is free — try any class, use any equipment, no
-            commitment.
+            Tvoj prvi trening je besplatan — probaj bilo koji trening, koristi bilo koju opremu, bez obaveze.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -154,12 +152,12 @@ export default function ClassesPage() {
           >
             <Link href="/contact">
               <Button className="rounded-xl bg-accent px-8 py-6 text-base font-bold text-white shadow-lg transition-all hover:bg-accent-dark active:scale-[0.97]">
-                Book Your Free 1 Day Trial
+                Zakaži besplatni probni trening
               </Button>
             </Link>
             <Link href="/pricing">
               <Button variant="outline" className="rounded-xl border-neutral-600 px-8 py-6 text-base font-semibold text-white transition-all hover:bg-white/10 hover:text-white active:scale-[0.97]">
-                View Pricing
+                Pogledaj cijene
               </Button>
             </Link>
           </motion.div>

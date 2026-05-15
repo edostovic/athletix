@@ -45,13 +45,13 @@ export function TrialBookingModal({ open, onClose }: TrialBookingModalProps) {
       if (!res.ok) {
         const errorMsg =
           data.errors?.join(" ") || data.error || "Something went wrong.";
-        toast.error("Booking failed", { description: errorMsg });
+        toast.error("Greška prilikom rezervacije", { description: errorMsg });
         return;
       }
 
-      toast.success("Trial booked!", {
+      toast.success("Probni trening zakazan!", {
         description:
-          "We've received your request and will confirm shortly.",
+          "Primili smo tvoj zahtjev i uskoro ćemo potvrditi termin.",
       });
       setFormData({
         name: "",
@@ -63,8 +63,8 @@ export function TrialBookingModal({ open, onClose }: TrialBookingModalProps) {
       });
       onClose();
     } catch {
-      toast.error("Network error", {
-        description: "Could not reach the server. Please try again.",
+      toast.error("Greška u mreži", {
+        description: "Nismo uspjeli doći do servera. Molimo pokušaj ponovo.",
       });
     } finally {
       setSubmitting(false);
@@ -103,10 +103,10 @@ export function TrialBookingModal({ open, onClose }: TrialBookingModalProps) {
             </button>
 
             <h2 className="text-2xl font-bold text-neutral-950">
-              Book Your Free Trial
+              Zakaži besplatni probni trening
             </h2>
             <p className="mt-1 text-sm text-neutral-500">
-              Try Athletix free for 1 day — no strings attached.
+              Probaj Athletix besplatno 1 dan — bez obaveze.
             </p>
 
             <form onSubmit={handleSubmit} className="mt-6 space-y-4">
@@ -115,12 +115,12 @@ export function TrialBookingModal({ open, onClose }: TrialBookingModalProps) {
                   htmlFor="trial-name"
                   className="text-sm font-medium text-neutral-700"
                 >
-                  Full Name <span className="text-destructive">*</span>
+                  Ime i prezime <span className="text-destructive">*</span>
                 </label>
                 <Input
                   id="trial-name"
                   name="name"
-                  placeholder="Your name"
+                  placeholder="Tvoje ime"
                   value={formData.name}
                   onChange={handleChange}
                   required
@@ -140,7 +140,7 @@ export function TrialBookingModal({ open, onClose }: TrialBookingModalProps) {
                     id="trial-email"
                     name="email"
                     type="email"
-                    placeholder="your@email.com"
+                    placeholder="tvoj@email.com"
                     value={formData.email}
                     onChange={handleChange}
                     required
@@ -152,13 +152,13 @@ export function TrialBookingModal({ open, onClose }: TrialBookingModalProps) {
                     htmlFor="trial-phone"
                     className="text-sm font-medium text-neutral-700"
                   >
-                    Phone <span className="text-destructive">*</span>
+                    Telefon <span className="text-destructive">*</span>
                   </label>
                   <Input
                     id="trial-phone"
                     name="phone"
                     type="tel"
-                    placeholder="+1 (555) 000-0000"
+                    placeholder="+387 61 000 000"
                     value={formData.phone}
                     onChange={handleChange}
                     required
@@ -173,7 +173,7 @@ export function TrialBookingModal({ open, onClose }: TrialBookingModalProps) {
                     htmlFor="trial-date"
                     className="text-sm font-medium text-neutral-700"
                   >
-                    Preferred Date <span className="text-destructive">*</span>
+                    Željeni datum <span className="text-destructive">*</span>
                   </label>
                   <Input
                     id="trial-date"
@@ -190,7 +190,7 @@ export function TrialBookingModal({ open, onClose }: TrialBookingModalProps) {
                     htmlFor="trial-time"
                     className="text-sm font-medium text-neutral-700"
                   >
-                    Preferred Time
+                    Željeno vrijeme
                   </label>
                   <Input
                     id="trial-time"
@@ -208,13 +208,13 @@ export function TrialBookingModal({ open, onClose }: TrialBookingModalProps) {
                   htmlFor="trial-notes"
                   className="text-sm font-medium text-neutral-700"
                 >
-                  Notes (optional)
+                  Napomena (opciono)
                 </label>
                 <textarea
                   id="trial-notes"
                   name="notes"
                   rows={3}
-                  placeholder="Anything we should know..."
+                  placeholder="Nešto što trebamo znati..."
                   value={formData.notes}
                   onChange={handleChange}
                   className="w-full rounded-[10px] border border-border bg-white px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20"
@@ -229,10 +229,10 @@ export function TrialBookingModal({ open, onClose }: TrialBookingModalProps) {
                 {submitting ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Booking...
+                    Rezervacija...
                   </>
                 ) : (
-                  "Book Free Trial"
+                  "Zakaži besplatno"
                 )}
               </Button>
             </form>

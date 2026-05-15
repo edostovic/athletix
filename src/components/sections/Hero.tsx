@@ -30,7 +30,7 @@ export function Hero({ onBookTrial }: HeroProps) {
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-400/20 bg-brand-500/10 px-4 py-1.5 text-sm font-medium text-brand-300"
           >
             <span className="h-2 w-2 rounded-full bg-accent" />
-            New members: try us free for 1 day
+            Novi članovi: probaj besplatno 1 dan
           </motion.div>
 
           {/* Headline */}
@@ -40,9 +40,9 @@ export function Hero({ onBookTrial }: HeroProps) {
             transition={{ duration: 0.5, ease: [0.34, 1.56, 0.64, 1] as const, delay: 0.1 }}
             className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            Find Your Strength.
+            Pronađi svoju snagu.
             <br />
-            <span className="text-brand-400">Find Your People.</span>
+            <span className="text-brand-400">Pronađi svoje mjesto.</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -52,8 +52,7 @@ export function Hero({ onBookTrial }: HeroProps) {
             transition={{ duration: 0.4, ease: [0.34, 1.56, 0.64, 1] as const, delay: 0.2 }}
             className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-neutral-300 sm:text-xl"
           >
-            Real coaching. Real community. Zero intimidation. Try your first
-            week free.
+            Stvarni treninzi. Stvarna zajednica. Nula straha. Probaj besplatno 1 dan.
           </motion.p>
 
           {/* CTAs */}
@@ -68,7 +67,7 @@ export function Hero({ onBookTrial }: HeroProps) {
               onClick={onBookTrial}
               className="rounded-xl bg-accent px-8 py-6 text-base font-bold text-white shadow-lg transition-all hover:bg-accent-dark hover:shadow-xl active:scale-[0.97]"
             >
-              Book Your Free 1 Day Trial
+              Zakaži besplatni probni trening
             </Button>
             <Link href="/pricing">
               <Button
@@ -76,7 +75,7 @@ export function Hero({ onBookTrial }: HeroProps) {
                 size="lg"
                 className="rounded-xl border-neutral-600 px-8 py-6 text-base font-semibold text-white transition-all hover:bg-white/10 hover:text-white active:scale-[0.97]"
               >
-                View Pricing
+                Pogledaj cijene
               </Button>
             </Link>
           </motion.div>
@@ -97,8 +96,8 @@ export function Hero({ onBookTrial }: HeroProps) {
               ))}
             </div>
             <span>
-              <span className="font-semibold text-white">500+</span> members
-              and growing
+              <span className="font-semibold text-white">500+</span> članova
+              i rastemo
             </span>
           </motion.div>
         </div>

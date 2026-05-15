@@ -13,18 +13,18 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     quote:
-      "I was nervous walking in. Day one, someone said hi by name. That never happens at big gyms.",
+      "Bilo me strah ući. Prvog dana, neko me oslovio imenom. To se ne dešava u velikim teretanama.",
     name: "Marko K.",
   },
   {
     quote:
-      "Lost 15kg in 4 months with the coaching program. The trainers actually care about your form.",
+      "Izgubio 15kg za 4 mjeseca uz coaching program. Treneri stvarno vode računa o tvojoj tehnici.",
     name: "Lejla A.",
-    result: "15kg lost in 4 months",
+    result: "15kg izgubljeno za 4 mjeseca",
   },
   {
     quote:
-      "Best decision I made in 2025. The community keeps me coming back even on low motivation days.",
+      "Najbolja odluka koju sam donio u 2025. Zajednica me tjera da se vraćam čak i u danima bez motivacije.",
     name: "Amar H.",
   },
 ];
@@ -60,7 +60,7 @@ export function Testimonials() {
             ))}
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-neutral-950 sm:text-4xl">
-            Join 500+ Members Who Found Their Home
+            Pridruži se 500+ članova koji su pronašli svoj dom
           </h2>
         </motion.div>
 

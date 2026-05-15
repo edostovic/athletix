@@ -13,11 +13,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s — Athletix Gym",
-    default: "Athletix Gym — Real Coaching. Real Community.",
+    template: "%s — ATHLETIX Gym",
+    default: "ATHLETIX Gym Banovići — Teretana za svakoga",
   },
   description:
-    "Real coaching. Real community. Zero intimidation. Join Athletix and find your strength. First week free.",
+    "ATHLETIX Gym u Banovićima — teretana bez izgovora. Stručno vođenje, moderna oprema, zajednica koja te podržava. Probaj besplatno 1 dan.",
 };
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="bs"
       className={`${inter.variable} h-full scroll-smooth antialiased`}
     >
       <body className="flex min-h-full flex-col font-sans">

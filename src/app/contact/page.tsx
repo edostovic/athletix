@@ -18,32 +18,32 @@ import Link from "next/link";
 const contactInfo = [
   {
     icon: MapPin,
-    label: "Location",
-    value: "123 Fitness Street, City, State 10001",
+    label: "Lokacija",
+    value: "Banovići, Bosna i Hercegovina",
   },
   {
     icon: Clock,
-    label: "Hours",
-    value: "Mon–Fri: 6am – 10pm • Sat–Sun: 8am – 8pm",
+    label: "Radno vrijeme",
+    value: "Pon–Pet: 06:00–22:00 • Sub: 08:00–20:00 • Ned: 10:00–16:00",
   },
   {
     icon: Phone,
-    label: "Phone",
-    value: "+1 (555) 123-4567",
+    label: "Telefon",
+    value: "+387 61 954 069",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "hello@athletix.com",
+    value: "atheltixgym.info@gmail.com",
   },
 ];
 
 const interests = [
-  "General Inquiry",
-  "Membership",
-  "Personal Training",
-  "Class Schedule",
-  "Corporate Membership",
+  "Opšti upit",
+  "Članstvo",
+  "Personalni trening",
+  "Raspored treninga",
+  "Korporativno članstvo",
 ];
 
 export default function ContactPage() {
@@ -83,13 +83,13 @@ export default function ContactPage() {
 
       if (!res.ok) {
         const errorMsg =
-          data.errors?.join(" ") || data.error || "Something went wrong.";
-        toast.error("Submission failed", { description: errorMsg });
+          data.errors?.join(" ") || data.error || "Nešto je pošlo po zlu.";
+        toast.error("Slanje nije uspjelo", { description: errorMsg });
         return;
       }
 
-      toast.success("Thanks for reaching out!", {
-        description: "We'll get back to you within 24 hours.",
+      toast.success("Hvala što si nam se javio!", {
+        description: "Odgovorit ćemo ti u roku od 24 sata.",
       });
       setFormData({
         name: "",
@@ -99,8 +99,8 @@ export default function ContactPage() {
         message: "",
       });
     } catch {
-      toast.error("Network error", {
-        description: "Could not reach the server. Please try again.",
+      toast.error("Greška u mreži", {
+        description: "Nismo uspjeli doći do servera. Molimo pokušaj ponovo.",
       });
     } finally {
       setSubmitting(false);
@@ -118,7 +118,7 @@ export default function ContactPage() {
             transition={{ duration: 0.5, ease: [0.34, 1.56, 0.64, 1] as const }}
             className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl"
           >
-            Let&apos;s Talk
+            Kontaktiraj nas
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -126,8 +126,7 @@ export default function ContactPage() {
             transition={{ duration: 0.4, ease: [0.34, 1.56, 0.64, 1] as const, delay: 0.1 }}
             className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-neutral-300"
           >
-            Have a question? Want to book a tour? Ready to start your free
-            week? We&apos;re here for you.
+            Imaš pitanje? Želiš zakazati obilazak? Spreman za besplatni probni dan? Tu smo za tebe.
           </motion.p>
         </div>
       </section>
@@ -145,11 +144,10 @@ export default function ContactPage() {
               className="lg:col-span-3"
             >
               <h2 className="text-2xl font-bold text-neutral-950">
-                Send Us a Message
+                Pošalji nam poruku
               </h2>
               <p className="mt-2 text-sm text-neutral-500">
-                Fill out the form below and we&apos;ll get back to you within
-                24 hours.
+                Ispuni formu ispod i javit ćemo ti se u roku od 24 sata.
               </p>
               <form onSubmit={handleSubmit} className="mt-8 space-y-6">
                 <div className="grid gap-6 sm:grid-cols-2">
@@ -158,12 +156,12 @@ export default function ContactPage() {
                       htmlFor="name"
                       className="text-sm font-medium text-neutral-700"
                     >
-                      Full Name <span className="text-destructive">*</span>
+                      Ime i prezime <span className="text-destructive">*</span>
                     </label>
                     <Input
                       id="name"
                       name="name"
-                      placeholder="Your name"
+                      placeholder="Tvoje ime"
                       value={formData.name}
                       onChange={handleChange}
                       required
@@ -181,7 +179,7 @@ export default function ContactPage() {
                       id="email"
                       name="email"
                       type="email"
-                      placeholder="your@email.com"
+                      placeholder="tvoj@email.com"
                       value={formData.email}
                       onChange={handleChange}
                       required
@@ -196,13 +194,13 @@ export default function ContactPage() {
                       htmlFor="phone"
                       className="text-sm font-medium text-neutral-700"
                     >
-                      Phone (optional)
+                      Telefon (opciono)
                     </label>
                     <Input
                       id="phone"
                       name="phone"
                       type="tel"
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="+387 61 000 000"
                       value={formData.phone}
                       onChange={handleChange}
                       className="rounded-[10px] border-border"
@@ -213,7 +211,7 @@ export default function ContactPage() {
                       htmlFor="interest"
                       className="text-sm font-medium text-neutral-700"
                     >
-                      I&apos;m Interested In
+                      Zanima me
                     </label>
                     <Select
                       value={formData.interest}
@@ -223,7 +221,7 @@ export default function ContactPage() {
                         id="interest"
                         className="rounded-[10px] border-border"
                       >
-                        <SelectValue placeholder="Select an option" />
+                        <SelectValue placeholder="Izaberi opciju" />
                       </SelectTrigger>
                       <SelectContent>
                         {interests.map((opt) => (
@@ -241,13 +239,13 @@ export default function ContactPage() {
                     htmlFor="message"
                     className="text-sm font-medium text-neutral-700"
                   >
-                    Message <span className="text-destructive">*</span>
+                    Poruka <span className="text-destructive">*</span>
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     rows={5}
-                    placeholder="Tell us how we can help..."
+                    placeholder="Reci nam kako možemo pomoći..."
                     value={formData.message}
                     onChange={handleChange}
                     required
@@ -263,10 +261,10 @@ export default function ContactPage() {
                   {submitting ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      Sending...
+                      Slanje...
                     </>
                   ) : (
-                    "Send Message"
+                    "Pošalji poruku"
                   )}
                 </Button>
               </form>
@@ -282,11 +280,10 @@ export default function ContactPage() {
             >
               <div className="rounded-[20px] border border-border bg-neutral-50 p-8 shadow-sm">
                 <h3 className="text-lg font-semibold text-neutral-950">
-                  Visit Us
+                  Posjeti nas
                 </h3>
                 <p className="mt-2 text-sm text-neutral-500">
-                  Drop by anytime during operating hours. No appointment needed
-                  for a tour.
+                  Svrati bilo kada tokom radnog vremena. Nije potrebna najava za obilazak.
                 </p>
 
                 <div className="mt-8 space-y-6">
@@ -301,18 +298,34 @@ export default function ContactPage() {
                           <p className="text-sm font-medium text-neutral-700">
                             {item.label}
                           </p>
-                          <p className="mt-0.5 text-sm text-neutral-600">
-                            {item.value}
-                          </p>
+                          {item.label === "Telefon" ? (
+                            <a
+                              href="tel:+38761954069"
+                              className="mt-0.5 text-sm text-neutral-600 hover:text-brand-500"
+                            >
+                              {item.value}
+                            </a>
+                          ) : item.label === "Email" ? (
+                            <a
+                              href="mailto:atheltixgym.info@gmail.com"
+                              className="mt-0.5 text-sm text-neutral-600 hover:text-brand-500"
+                            >
+                              {item.value}
+                            </a>
+                          ) : (
+                            <p className="mt-0.5 text-sm text-neutral-600">
+                              {item.value}
+                            </p>
+                          )}
                         </div>
                       </div>
                     );
                   })}
                 </div>
 
-                <div className="mt-8">
+                <div className="mt-6">
                   <Link
-                    href="https://maps.google.com"
+                    href="https://wa.me/38761954069"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -320,18 +333,24 @@ export default function ContactPage() {
                       variant="outline"
                       className="w-full rounded-xl border-brand-200 bg-white py-6 text-sm font-semibold text-brand-600 transition-all hover:bg-brand-50 hover:text-brand-700 active:scale-[0.97]"
                     >
-                      Get Directions
+                      Pošalji poruku na WhatsApp
                     </Button>
                   </Link>
                 </div>
-              </div>
 
-              {/* Map placeholder */}
-              <div className="mt-6 overflow-hidden rounded-[20px] border border-border bg-neutral-100">
-                <div className="flex aspect-[4/3] items-center justify-center bg-neutral-200">
-                  <p className="text-sm text-neutral-500">
-                    Map placeholder
-                  </p>
+                <div className="mt-4">
+                  <a
+                    href="https://www.instagram.com/athletix_gym/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button
+                      variant="outline"
+                      className="w-full rounded-xl border-brand-200 bg-white py-6 text-sm font-semibold text-brand-600 transition-all hover:bg-brand-50 hover:text-brand-700 active:scale-[0.97]"
+                    >
+                      Prati nas na Instagramu
+                    </Button>
+                  </a>
                 </div>
               </div>
             </motion.div>
